@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EngineerDashboard.Account {
+namespace EngineerDashboard {
     
     
     public partial class Login {
@@ -47,6 +47,7 @@ namespace EngineerDashboard.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Password;
+
         
         /// <summary>
         /// RememberMe control.
@@ -92,5 +93,6 @@ namespace EngineerDashboard.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::EngineerDashboard.Account.OpenAuthProviders OpenAuthLogin;
+
     }
 }
