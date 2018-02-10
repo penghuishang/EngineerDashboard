@@ -17,11 +17,11 @@
                         </p>
                     </asp:PlaceHolder>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Pawprint" CssClass="col-md-2 control-label">Pawprint</asp:Label>
                         <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                                CssClass="text-danger" ErrorMessage="The email field is required." />
+                            <asp:TextBox runat="server" ID="Pawprint" CssClass="form-control"/>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Pawprint"
+                                CssClass="text-danger" ErrorMessage="The pawprint field is required." />
                         </div>
                     </div>
                     <div class="form-group">
@@ -42,6 +42,16 @@
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
                             <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <asp:Label runat="server" ID="LoginFailMessage" CssClass="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <asp:Label runat="server" ID="LoginSuccessMessage" CssClass="form-control"/>
                         </div>
                     </div>
                 </div>
