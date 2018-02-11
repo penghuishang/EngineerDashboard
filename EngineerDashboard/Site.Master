@@ -13,14 +13,6 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <style>
-        .image{
-            position:absolute;
-            top:3%;
-            left:15%;
-        }
-    </style>
-
 </head>
 <body>
     <form runat="server">
@@ -44,23 +36,28 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-        <div>
-            <div class="image">
-                <img src="Content/image11111.png" alt="MuIcon" >  
-            </div>
        
-          
-        </div>
         <div class="container body-content">
+            <div class ="row">
+                <div class="Header-wrapper">
+                    <header id="header" >
+                        <div class="logo">
+                            <asp:HyperLink id="logolink" NavigateUrl="#" runat="server" ImageUrl="Assets/logo_mu.png"/> 
+                        </div>
+                        <div class="unit">
+                            <asp:HyperLink NavigateUrl="#" runat="server" Text="Collage of Engineering" Font-Size="25px" ForeColor="Black"/>                         
+                        </div>
+                        <asp:HyperLink NavigateUrl="https://engineering.missouri.edu/" runat="server" Text="University of Missouri" Font-Size="18px" ForeColor="Black"/>         
+                    </header>
+             </div>
+        </div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
+            <hr/>
             <footer>
-                <p>Development by the Center for Health Care Quality - Universtiy of Missouri School of Medicine</p>
+                <p>Development by the Engineering Collage - Universtiy of Missouri</p>
             </footer>
-        </div>
-    
+        </div>    
     </form>
 </body>
 </html>

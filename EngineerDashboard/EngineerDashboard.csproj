@@ -187,7 +187,7 @@
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\Lockout.aspx" />
-    <Content Include="Login.aspx" />
+    <Resource Include="Assets\logo_mu.png" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\ManageLogins.aspx" />
     <Content Include="Account\ManagePassword.aspx" />
@@ -198,11 +198,9 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="App_Data\MuIcon.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\image11111.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -290,13 +288,6 @@
     </Compile>
     <Compile Include="Account\Lockout.aspx.designer.cs">
       <DependentUpon>Lockout.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Manage.aspx.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
@@ -421,7 +412,9 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
