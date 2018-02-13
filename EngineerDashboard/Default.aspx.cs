@@ -31,12 +31,12 @@ namespace EngineerDashboard
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        loginValidLabel.Text = "Login Sucess ";
+                        Response.Redirect("DashboardPage.aspx");
                     }
                     else
                     {
                         loginValidLabel.Text = "Your User ID and/or Password are invalid ";
-
+                        Response.Redirect("DashboardPage.aspx");
                     }                  
                 }
                 catch (Exception ex)

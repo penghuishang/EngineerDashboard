@@ -11,7 +11,7 @@ namespace EngineerDashboard
 {
 
 
-    public partial class About
+    public partial class ImportExclePage
     {
     }
 }
