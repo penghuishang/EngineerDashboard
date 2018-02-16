@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -413,6 +414,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+<<<<<<< HEAD
     <Compile Include="UserManagePage.aspx.cs">
       <DependentUpon>UserManagePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -420,6 +422,9 @@
     <Compile Include="UserManagePage.aspx.designer.cs">
       <DependentUpon>UserManagePage.aspx</DependentUpon>
     </Compile>
+=======
+    <Compile Include="UserMessage.cs" />
+>>>>>>> master
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
