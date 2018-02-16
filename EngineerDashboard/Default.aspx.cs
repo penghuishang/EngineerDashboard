@@ -25,18 +25,26 @@ namespace EngineerDashboard
                 try
                 {
                     string pawprint = Pawprint.Text;
-                    string pwd = Password.Text;            
-                    string query = "select Pawprint from dbo.[User] where Pawprint='" + pawprint + "'";
+                    string pwd = Password.Text;
+                    string query = "select Pawprint,Name, Email, Security_Id from dbo.[User] where Pawprint='" + pawprint + "'";
                     SqlCommand cmd = new SqlCommand(query, con);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        Response.Redirect("DashboardPage.aspx");
-                    }
-                    else
-                    {
-                        loginValidLabel.Text = "Your User ID and/or Password are invalid ";
-                        Response.Redirect("DashboardPage.aspx");
+                        if (reader.Read())
+                        {                      
+                            User user = new User();
+                            user.Pawprint = reader["Pawprint"].ToString();
+                            user.Name = reader["Name"].ToString();
+                            user.Email = reader["Email"].ToString();
+                            user.Security_Id = reader["Security_Id"].ToString();
+                            Session["user"] = user;
+                            Response.Redirect("DashboardPage.aspx");
+                        }
+                        else
+                        {
+                            loginValidLabel.Text = "Your User ID and/or Password are invalid ";
+
+                        }
                     }                  
                 }
                 catch (Exception ex)
