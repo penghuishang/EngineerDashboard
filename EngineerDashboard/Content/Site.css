@@ -44,6 +44,10 @@ input[type="select"] {
     background-position: center; 
 }
 
+.Dashboard_Left{
+    width:60%;
+    float:left;
+}
 
 
 

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="DataSource1">
+      <Name>Month_ResearchAllAggregated</Name>
+      <Connection Name="EngineeringConnection" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Month_ResearchAllAggregated">
+        <Tables>
+          <Table Name="Month_ResearchAllAggregated" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="Month_ResearchAllAggregated" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+</Dashboard>

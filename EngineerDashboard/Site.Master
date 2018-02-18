@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EngineerDashboard.SiteMaster" %>
 
+<%@ Register Assembly="Syncfusion.EJ.Web, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Web" TagPrefix="ej" %>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -49,6 +51,24 @@
                         </div>
                         <asp:HyperLink NavigateUrl="https://engineering.missouri.edu/" runat="server" Text="University of Missouri" Font-Size="18px" ForeColor="Black" />
                     </header>
+                </div>
+                <div class="frame">
+                    <ej:Menu ID="SyncfusionProducts" Width="615" runat="server">
+                        <Items>
+                            <ej:MenuItem Id="Products" Text="Products">
+                            </ej:MenuItem>
+                            <ej:MenuItem Id="Support" Text="Support">
+                            </ej:MenuItem>
+                            <ej:MenuItem Id="Purchase" Text="Purchase">
+                            </ej:MenuItem>
+                            <ej:MenuItem Id="Downloads" Text="Downloads">
+                            </ej:MenuItem>
+                            <ej:MenuItem Id="Resources" Text="Resources">
+                            </ej:MenuItem>
+                            <ej:MenuItem Id="Company" Text="Company">
+                            </ej:MenuItem>
+                        </Items>
+                    </ej:Menu>
                 </div>
             </div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
