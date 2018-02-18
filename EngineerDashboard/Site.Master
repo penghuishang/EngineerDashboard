@@ -53,7 +53,7 @@
                     </header>
                 </div>
                 <div class="frame">
-                    <ej:Menu ID="SyncfusionProducts" Width="615" runat="server">
+                    <ej:Menu ID="SyncfusionProducts" runat="server">
                         <Items>
                             <ej:MenuItem Id="Products" Text="Products">
                             </ej:MenuItem>
