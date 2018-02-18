@@ -50,6 +50,20 @@
                         <asp:HyperLink NavigateUrl="https://engineering.missouri.edu/" runat="server" Text="University of Missouri" Font-Size="18px" ForeColor="Black"/>         
                     </header>
              </div>
+                <div>
+                    <Menu ID="SyncfusionProducts" runat="server">
+                        <items>
+                            <ej:MenuItem Id="Dashboard" url="DashboardPage.aspx" Text="Dashboard" SpriteCssClass="main_page" Class="main_menu">
+                            </ej:MenuItem>
+                            <ej:MenuItem Id="ImportExcel" url="ImportExclePage.aspx" Text="ImportExcel" SpriteCssClass="main_page Class="main_menu">
+                            </ej:MenuItem> 
+                            <ej:MenuItem Id="Username" url="UserManagePage.aspx" Text="Username" SpriteCssClass="main_page Class="main_menu">
+                            </ej:MenuItem>
+                            <ej:MenuItem Id="Logout" url="Default.aspx" Text="Louout" SpriteCssClass="main_page Class="main_menu">
+                            </ej:MenuItem>
+                        </items>
+                    </Menu>
+                </div>
         </div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
