@@ -55,7 +55,7 @@
                 <div class="frame">
                     <ej:Menu ID="SyncfusionProducts" runat="server">
                         <Items>
-                            <ej:MenuItem Id="Products" Text="Products">
+                            <ej:MenuItem Id="Products" Text="Products" Url="~/Contact">
                             </ej:MenuItem>
                             <ej:MenuItem Id="Support" Text="Support">
                             </ej:MenuItem>
