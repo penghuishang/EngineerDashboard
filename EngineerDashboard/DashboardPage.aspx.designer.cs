@@ -13,40 +13,58 @@ namespace EngineerDashboard {
     public partial class DashboardPage {
         
         /// <summary>
-        /// Label1 control.
+        /// DropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::Syncfusion.JavaScript.Web.DropDownList DropDownList;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// Label2 control.
+        /// MetricGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::Syncfusion.JavaScript.Web.Grid MetricGrid;
         
         /// <summary>
-        /// Matric_Grid control.
+        /// button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Grid Matric_Grid;
+        protected global::System.Web.UI.WebControls.Button button;
+        
+        /// <summary>
+        /// ChartTabContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.Tab ChartTabContent;
+        
+        /// <summary>
+        /// QtrB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.TabItem QtrB;
         
         /// <summary>
         /// Chart control.
@@ -58,12 +76,57 @@ namespace EngineerDashboard {
         protected global::Syncfusion.JavaScript.Web.Chart Chart;
         
         /// <summary>
-        /// Grid2 control.
+        /// QtrL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Grid Grid2;
+        protected global::Syncfusion.JavaScript.Web.TabItem QtrL;
+        
+        /// <summary>
+        /// YoY control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.TabItem YoY;
+        
+        /// <summary>
+        /// RollB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.TabItem RollB;
+        
+        /// <summary>
+        /// RollL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.TabItem RollL;
+        
+        /// <summary>
+        /// FY control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.TabItem FY;
+        
+        /// <summary>
+        /// DepartGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.Grid DepartGrid;
     }
 }
