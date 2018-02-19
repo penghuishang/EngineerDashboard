@@ -422,6 +422,13 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserManagePage.aspx.cs">
+      <DependentUpon>UserManagePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagePage.aspx.designer.cs">
+      <DependentUpon>UserManagePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

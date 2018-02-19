@@ -22,67 +22,49 @@ namespace EngineerDashboard {
         protected global::System.Web.UI.WebControls.HyperLink logolink;
         
         /// <summary>
-        /// SyncfusionProducts control.
+        /// menuBar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Menu SyncfusionProducts;
+        protected global::Syncfusion.JavaScript.Web.Menu menuBar;
         
         /// <summary>
-        /// Products control.
+        /// Dashboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.MenuItem Products;
+        protected global::Syncfusion.JavaScript.Web.MenuItem Dashboard;
         
         /// <summary>
-        /// Support control.
+        /// ImportExcel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.MenuItem Support;
+        protected global::Syncfusion.JavaScript.Web.MenuItem ImportExcel;
         
         /// <summary>
-        /// Purchase control.
+        /// Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.MenuItem Purchase;
+        protected global::Syncfusion.JavaScript.Web.MenuItem Username;
         
         /// <summary>
-        /// Downloads control.
+        /// Logout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.MenuItem Downloads;
-        
-        /// <summary>
-        /// Resources control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.MenuItem Resources;
-        
-        /// <summary>
-        /// Company control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.MenuItem Company;
+        protected global::Syncfusion.JavaScript.Web.MenuItem Logout;
         
         /// <summary>
         /// MainContent control.
@@ -92,14 +74,5 @@ namespace EngineerDashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
-        
-        /// <summary>
-        /// ScriptSection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptSection;
     }
 }

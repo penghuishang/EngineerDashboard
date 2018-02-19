@@ -49,12 +49,10 @@ namespace EngineerDashboard
 
         protected void dataBind()
         {
-
             DepartGrid.DataSource = (DataTable)Session["SqlDepartment"];
             DepartGrid.DataBind();
             MetricGrid.DataSource = (DataTable)Session["SqlMetric"];
             MetricGrid.DataBind();
-
         }
 
         protected void button_Click(object sender, EventArgs e)

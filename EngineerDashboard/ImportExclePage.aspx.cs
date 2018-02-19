@@ -40,7 +40,89 @@ namespace EngineerDashboard
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["EngineeringConnection"].ConnectionString))
+                {
+                    conn.Open();
+                    try
+                    {
+                        string query = "select * from dbo.[Awards_by_Admin_Unit]";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        AwardsAdminUnit_Gird.DataSource = dt;
+                        AwardsAdminUnit_Gird.DataBind();
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write(ex.Message);
+                    }
 
+                    try
+                    {
+                        string query = "select * from dbo.[Awards_by_Shared_Credit]";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        AwardsSharedCredit_Gird.DataSource = dt;
+                        AwardsSharedCredit_Gird.DataBind();
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write(ex.Message);
+                    }
+
+                    try
+                    {
+                        string query = "select * from dbo.[Expenditures_by_Admin_Unit]";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        ExpendituresAdminUnit_Grid.DataSource = dt;
+                        ExpendituresAdminUnit_Grid.DataBind();
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write(ex.Message);
+                    }
+
+                    try
+                    {
+                        string query = "select * from dbo.[Expenditures_by_Shared_Credit]";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        ExpendituresSharedCredit_Grid.DataSource = dt;
+                        ExpendituresSharedCredit_Grid.DataBind();
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write(ex.Message);
+                    }
+
+                    try
+                    {
+                        string query = "select * from dbo.[Proposal]";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        Proposals_Grid.DataSource = dt;
+                        Proposals_Grid.DataBind();
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write(ex.Message);
+                    }
+
+                    conn.Close();
+                }
+            }
         }
 
         protected void ImportExcel_click(Object sender, EventArgs e)
@@ -72,9 +154,8 @@ namespace EngineerDashboard
             {
                 da.Fill(ds);
                 dt = ds.Tables[0];
-
-                this.ExcelImport_Grid.DataSource = dt;
-                this.ExcelImport_Grid.DataBind();
+                AwardsAdminUnit_Gird.DataSource = dt;
+                AwardsAdminUnit_Gird.DataBind();
             }
             catch (Exception err)
             {

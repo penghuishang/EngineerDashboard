@@ -15,6 +15,7 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
     <form runat="server">
@@ -38,7 +39,6 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
         <div class="container body-content">
             <div class="row">
                 <div class="Header-wrapper">
@@ -52,28 +52,22 @@
                         <asp:HyperLink NavigateUrl="https://engineering.missouri.edu/" runat="server" Text="University of Missouri" Font-Size="18px" ForeColor="Black" />
                     </header>
                 </div>
-                <div class="frame">
-                    <ej:Menu ID="SyncfusionProducts" runat="server">
-                        <Items>
-                            <ej:MenuItem Id="Products" Text="Products" Url="~/Contact">
-                            </ej:MenuItem>
-                            <ej:MenuItem Id="Support" Text="Support">
-                            </ej:MenuItem>
-                            <ej:MenuItem Id="Purchase" Text="Purchase">
-                            </ej:MenuItem>
-                            <ej:MenuItem Id="Downloads" Text="Downloads">
-                            </ej:MenuItem>
-                            <ej:MenuItem Id="Resources" Text="Resources">
-                            </ej:MenuItem>
-                            <ej:MenuItem Id="Company" Text="Company">
-                            </ej:MenuItem>
-                        </Items>
-                    </ej:Menu>
-                </div>
+            </div>
+            <div class="row">
+                <ej:Menu ID="menuBar" runat="server">
+                    <Items>
+                        <ej:MenuItem Id="Dashboard" runat="server" Url="DashboardPage.aspx" Text="Dashboard">
+                        </ej:MenuItem>
+                        <ej:MenuItem Id="ImportExcel" Url="ImportExclePage.aspx" Text="Import Excel">
+                        </ej:MenuItem>
+                        <ej:MenuItem Id="Username" Url="UserManagePage.aspx" Text="User Management">
+                        </ej:MenuItem>
+                        <ej:MenuItem Id="Logout" Url="Default.aspx" Text="Log out">
+                        </ej:MenuItem>
+                    </Items>
+                </ej:Menu>
             </div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ScriptSection" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
