@@ -39,6 +39,11 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+	<style>
+	    li a:hover:not(.active) {
+	        background-color: #ffd700;
+	    }
+    </style>
         <div class="container body-content">
             <div class="row">
                 <div class="Header-wrapper">
@@ -47,7 +52,7 @@
                             <asp:HyperLink ID="logolink" NavigateUrl="#" runat="server" ImageUrl="Assets/logo_mu.png" />
                         </div>
                         <div class="unit">
-                            <asp:HyperLink NavigateUrl="#" runat="server" Text="Collage of Engineering" Font-Size="25px" ForeColor="Black" />
+                            <asp:HyperLink NavigateUrl="#" runat="server" Text="College of Engineering" Font-Size="25px" ForeColor="Black" />
                         </div>
                         <asp:HyperLink NavigateUrl="https://engineering.missouri.edu/" runat="server" Text="University of Missouri" Font-Size="18px" ForeColor="Black" />
                     </header>
@@ -71,7 +76,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>Development by the Engineering Collage - Universtiy of Missouri</p>
+                <p>Development by the Engineering College - Universtiy of Missouri</p>
             </footer>
         </div>
     </form>

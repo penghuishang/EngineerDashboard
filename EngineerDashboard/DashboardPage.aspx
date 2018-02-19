@@ -15,6 +15,42 @@
             margin-left: 340px;
             text-align: left;
         }
+        .e-menu {
+            font-weight: 600;
+        }
+        .e-menu.e-horizontal .e-mhover, .e-menu.e-context .e-mhover, .e-menu.e-vertical .e-mhover, .e-menu.e-horizontal .e-mhover .e-menulink, .e-menu.e-context .e-mhover .e-menulink .e-menu.e-vertical .e-mhover .e-menulink .e-menu.e-horizontal .e-mfocused .e-menu.e-context .e-mfocused .e-menu.e-vertical .e-mfocused .e-menu.e-horizontal .e-mfocused  .e-menulink .e-menu.e-context .e-mfocused .e-menulink .e-menu.e-vertical .e-mfocused .e-menulink .e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover {
+            background: #ffd700;
+        }
+        .e-grid tr.e-hover {
+            background: #ffd700;
+        }
+        .e-pager .e-currentitem{
+            background: #ffd700;
+        }
+        .e-pager .e-currentitem.e-hover{
+            background: #ffd700;
+        }
+        .e-pager .e-numericitem.e-hover, .e-pager .e-currentitem.e-hover{
+            background: #ffd700;
+        }
+        .e-grid td.e-active, .e-grid .e-form-titlebar{
+            background: #ffd700;
+        }
+        .e-btn.e-select:hover, .e-btn.e-select.e-active:hover{
+            background: #ffd700;
+        }
+        .e-tab .e-header.e-addborderbottom .e-active{
+            border-top: 3px #ffd700;
+        }
+        .e-tab.e-js .e-header > .e-active:hover, .e-tab.e-js .e-left > .e-active:hover, .e-tab.e-js .e-right > .e-active:hover, .e-tab.e-js .e-header.e-item:hover, .e-tab.e-js .e-left.e-item:hover, .e-tab.e-js .e-right.e-item:hover{
+            background: #ffd700;
+        }
+        .e-tab .e-header > .e-active a, .e-tab .e-left > .e-active a, .e-tab .e-right > .e-active a{
+            background: #1;
+        }
+        .e-ddl-popup .e-hover{
+            background: #ffd700;
+        }
     </style>
         <div class="row">
             <div class="col-md-7" >
