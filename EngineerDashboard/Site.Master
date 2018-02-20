@@ -18,7 +18,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
-    <form runat="server">
+    <form runat="server" >
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -56,7 +56,7 @@
             <div class="row">
                 <ej:Menu ID="menuBar" runat="server">
                     <Items>
-                        <ej:MenuItem Id="Dashboard" runat="server" Url="DashboardPage.aspx" Text="Dashboard">
+                        <ej:MenuItem Id="Dashboard" Url="DashboardPage.aspx" Text="Dashboard">
                         </ej:MenuItem>
                         <ej:MenuItem Id="ImportExcel" Url="ImportExclePage.aspx" Text="Import Excel">
                         </ej:MenuItem>
@@ -69,6 +69,7 @@
             </div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+            
             <hr />
             <footer>
                 <p>Development by the Engineering Collage - Universtiy of Missouri</p>
