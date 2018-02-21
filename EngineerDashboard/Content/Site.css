@@ -1,6 +1,5 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -38,16 +37,12 @@ input[type="select"] {
 }
 
 #header .logo a{
-    width:66px;
-    height:74px;
+    width:70px;
+    height:78px;
     float:left;
     background-position: center; 
 }
 
-.Dashboard_Left{
-    width:60%;
-    float:left;
-}
 
 
 

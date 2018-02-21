@@ -2,174 +2,136 @@
 
 <%@ Register Assembly="Syncfusion.EJ.Web, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Web" TagPrefix="ej" %>
 
-<%@ Register assembly="Syncfusion.EJ, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" namespace="Syncfusion.JavaScript.Models" tagprefix="ej" %>
+<%@ Register Assembly="Syncfusion.EJ, Version=15.4460.0.17, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" Namespace="Syncfusion.JavaScript.Models" TagPrefix="ej" %>
 
 <asp:Content ID="ControlContent" ContentPlaceHolderID="MainContent" runat="server">
-    <style> 
-        .selectLeft{
+    <style>
+        .selectLeft {
             float: left;
             text-align: right;
             width: 320px;
         }
-        .selectRight{
+
+        .selectRight {
             margin-left: 340px;
             text-align: left;
         }
+
         .e-menu {
             font-weight: 600;
         }
-        .e-menu.e-horizontal .e-mhover, .e-menu.e-context .e-mhover, .e-menu.e-vertical .e-mhover, .e-menu.e-horizontal .e-mhover .e-menulink, .e-menu.e-context .e-mhover .e-menulink .e-menu.e-vertical .e-mhover .e-menulink .e-menu.e-horizontal .e-mfocused .e-menu.e-context .e-mfocused .e-menu.e-vertical .e-mfocused .e-menu.e-horizontal .e-mfocused  .e-menulink .e-menu.e-context .e-mfocused .e-menulink .e-menu.e-vertical .e-mfocused .e-menulink .e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover {
-            background: #ffd700;
-        }
+
+            .e-menu.e-horizontal .e-mhover, .e-menu.e-context .e-mhover, .e-menu.e-vertical .e-mhover, .e-menu.e-horizontal .e-mhover .e-menulink, .e-menu.e-context .e-mhover .e-menulink .e-menu.e-vertical .e-mhover .e-menulink .e-menu.e-horizontal .e-mfocused .e-menu.e-context .e-mfocused .e-menu.e-vertical .e-mfocused .e-menu.e-horizontal .e-mfocused .e-menulink .e-menu.e-context .e-mfocused .e-menulink .e-menu.e-vertical .e-mfocused .e-menulink .e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover {
+                background: #ffd700;
+            }
+
         .e-grid tr.e-hover {
             background: #ffd700;
         }
-        .e-pager .e-currentitem{
+
+        .e-pager .e-currentitem {
             background: #ffd700;
         }
-        .e-pager .e-currentitem.e-hover{
+
+            .e-pager .e-currentitem.e-hover {
+                background: #ffd700;
+            }
+
+            .e-pager .e-numericitem.e-hover, .e-pager .e-currentitem.e-hover {
+                background: #ffd700;
+            }
+
+        .e-grid td.e-active, .e-grid .e-form-titlebar {
             background: #ffd700;
         }
-        .e-pager .e-numericitem.e-hover, .e-pager .e-currentitem.e-hover{
+
+        .e-btn.e-select:hover, .e-btn.e-select.e-active:hover {
             background: #ffd700;
         }
-        .e-grid td.e-active, .e-grid .e-form-titlebar{
-            background: #ffd700;
-        }
-        .e-btn.e-select:hover, .e-btn.e-select.e-active:hover{
-            background: #ffd700;
-        }
-        .e-tab .e-header.e-addborderbottom .e-active{
+
+        .e-tab .e-header.e-addborderbottom .e-active {
             border-top: 3px #ffd700;
         }
-        .e-tab.e-js .e-header > .e-active:hover, .e-tab.e-js .e-left > .e-active:hover, .e-tab.e-js .e-right > .e-active:hover, .e-tab.e-js .e-header.e-item:hover, .e-tab.e-js .e-left.e-item:hover, .e-tab.e-js .e-right.e-item:hover{
+
+        .e-tab.e-js .e-header > .e-active:hover, .e-tab.e-js .e-left > .e-active:hover, .e-tab.e-js .e-right > .e-active:hover, .e-tab.e-js .e-header.e-item:hover, .e-tab.e-js .e-left.e-item:hover, .e-tab.e-js .e-right.e-item:hover {
             background: #ffd700;
         }
-        .e-tab .e-header > .e-active a, .e-tab .e-left > .e-active a, .e-tab .e-right > .e-active a{
-            background: #1;
+
+        .e-tab .e-header > .e-active a, .e-tab .e-left > .e-active a, .e-tab .e-right > .e-active a {
+            background: #ffd700;
         }
-        .e-ddl-popup .e-hover{
+
+        .e-ddl-popup .e-hover {
             background: #ffd700;
         }
     </style>
+    <div>
         <div class="row">
-            <div class="col-md-7" >
-               <div class="row">
-                   <h1 style="text-align:center;font-size:20px;"> SOM Research Metrics </h1>
-                   <div class="selectDepart">
-                       <div class="selectLeft">
-                           <asp:Label ID="Label1" runat="server" Text="Select a Department "></asp:Label>
-                       </div>
-                       <div class="selectRight">
-                           <ej:DropDownList ID="DropDownList" runat="server" DataTextField="text" DataValueField="Deptid_Descr" DataSourceID="SqlDataSource1" Width="200px" />
-                           <asp:SqlDataSource ID="SqlDataSource1" runat="server" SelectCommand="SELECT [Deptid_Descr] FROM [Department]" ConnectionString='<%$ ConnectionStrings:EngineeringConnection %>'/>
-                       </div>
-                   </div>
-                   <p style="text-align:center;font-size:14px">Select a Metric from the List to update the charts and department comparisons to the right.</p>
-                   <p style="text-align:center;font-size:12px"> Arrows next to FYTD values indicate either a 5% increase or decrease compared to the prior FYTD. </p>
-               </div>
-               <div class="row">
-               <ej:Grid ID="MetricGrid" runat="server" AllowPaging="true" AllowCellMerging="true" >
-                   <ClientSideEvents MergeCellInfo="cellmerge" />
-                   <Columns>
-                       <ej:Column Field="Category" HeaderText="Category" TextAlign="Right"/>
-                       <ej:Column Field="Measure" HeaderText="Metirc" TextAlign="Right"/>
-                       <ej:Column Field="VALUE" HeaderText="Value" TextAlign="Right"/>
-                   </Columns>
-               </ej:Grid>
-               </div>
-                 <p style="text-align:center;font-size:14px"></p>
-               <ej:Button Type="Button" ID="button" runat="server" Text="Click for the Definition of the Selected Measure" OnClick="button_Click" ></ej:Button>
-             </div>
-             <div class="col-md-5">
-                <div class="chart_list">
-                    <p style="text-align:center;font-size:14px"></p>
-                    <ej:Tab ID="ChartTabContent" runat="server">
-                        <Items>
-                            <ej:TabItem ID="QtrB" Text="QtrB">
-                                <ContentSection>
-                                    <ej:Chart ID="Chart" runat="server">
-                                        <PrimaryXAxis  LabelIntersectAction="Trim"></PrimaryXAxis>
-                                        <Series>
-                                            
-                                        </Series>
-                                        <Title Text="Total Full Credit Awards" />
-                                    </ej:Chart>
-                                </ContentSection>
-                            </ej:TabItem>
-                            <ej:TabItem ID="QtrL" Text="QtrL">
-                                 <ContentSection>
-                                    <ej:Chart ID="Chart1" runat="server">
-                                        <PrimaryXAxis  LabelIntersectAction="Trim"></PrimaryXAxis>
-                                        <Series>
-                                            
-                                        </Series>
-                                        <Title Text="Total Full Credit Awards" />
-                                    </ej:Chart>
-                                </ContentSection>
-                            </ej:TabItem>
-                            <ej:TabItem ID="YoY" Text="YoY">
-                                 <ContentSection>
-                                    <ej:Chart ID="Chart2" runat="server">
-                                        <PrimaryXAxis  LabelIntersectAction="Trim"></PrimaryXAxis>
-                                        <Series>
-                                            
-                                        </Series>
-                                        <Title Text="Total Full Credit Awards" />
-                                    </ej:Chart>
-                                </ContentSection>
-                            </ej:TabItem>
-                            <ej:TabItem ID="RollB" Text="RollB">
-                                 <ContentSection>
-                                    <ej:Chart ID="Chart3" runat="server">
-                                        <PrimaryXAxis  LabelIntersectAction="Trim"></PrimaryXAxis>
-                                        <Series>
-                                            
-                                        </Series>
-                                        <Title Text="Total Full Credit Awards" />
-                                    </ej:Chart>
-                                </ContentSection>
-                            </ej:TabItem>
-                            <ej:TabItem ID="RollL" Text="RollL">
-                                 <ContentSection>
-                                    <ej:Chart ID="Chart4" runat="server">
-                                        <PrimaryXAxis  LabelIntersectAction="Trim"></PrimaryXAxis>
-                                        <Series>
-                                            
-                                        </Series>
-                                        <Title Text="Total Full Credit Awards" />
-                                    </ej:Chart>
-                                </ContentSection>
-                            </ej:TabItem>
-                            <ej:TabItem ID="FY" Text="FY">
-                                 <ContentSection>
-                                    <ej:Chart ID="Chart5" runat="server">
-                                        <PrimaryXAxis  LabelIntersectAction="Trim"></PrimaryXAxis>
-                                        <Series>
-                                            
-                                        </Series>
-                                        <Title Text="Total Full Credit Awards" />
-                                    </ej:Chart>
-                                </ContentSection>
-                            </ej:TabItem>
-                        </Items>
-                    </ej:Tab>
-                </div>
-                <p style="text-align:center;font-size:14px"></p>
-                <p style="text-align:center;font-size:20px">Department Comparison</p>
-                <p style="text-align:center;font-size:14px">Click Column Heading to Sort </p>
-                <div class="DeptCompare_Gird">
-                    <ej:Grid ID="DepartGrid" runat="server" AllowPaging="true">
-                        <Columns>
-                           <ej:Column Field="ID" HeaderText="Order ID" TextAlign="Right" />
-                           <ej:Column Field="Department" HeaderText="Department" TextAlign="Right" />
-                           <ej:Column Field="Deptid_Descr" HeaderText="Description" TextAlign="Right" />
-                        </Columns>
-                    </ej:Grid>
-                </div>
-             </div>
+            <h1 style="text-align: center; font-size: 20px;">COE Research Metrics </h1>
         </div>
+        <div>
+            <ej:Grid ID="MetricGrid" runat="server" AllowPaging="true" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
+                AllowResizeToFit="true" AllowResizing="true">
+                <SortedColumns>
+                    <ej:SortedColumn Field="Category" Direction="Ascending" />
+                    <ej:SortedColumn Field="DisplayOrder" Direction="Ascending" />
+                </SortedColumns>
+                <ClientSideEvents MergeCellInfo="mergeCellInfo" />
+                <Columns>
+                    <ej:Column Field="Category" HeaderText="Category" />
+                    <ej:Column Field="Measure" HeaderText="Metirc" TextAlign="Right" />
+                    <ej:Column Field="Quarter" HeaderText="Quarter" TextAlign="Right" />
+                    <ej:Column Field="Amount" HeaderText="Amount" TextAlign="Right" />
+                </Columns>
+                <ToolbarSettings ShowToolbar="True" ToolbarItems="search"></ToolbarSettings>
+            </ej:Grid>
+        </div>
+        <div>
+            <div class="button_list"> 
+                 <ej:Button Type="Button" runat="server" Text="Log in" ClientSideOnClick="a" />       
+                </div>              
+                    <div id="chartlist" class="chart_list">
+                         <script type="text/javascript" src="../Scripts/ChartData.js"></script>
+                        <ej:Chart ID="Chart" runat="server" ClientIDMode="Static" IsResponsive="true" OnClientLoad="onChartLoad" EnableCanvasRendering="false">                             
+                            <PrimaryXAxis LabelIntersectAction="Trim"></PrimaryXAxis>
+                            <Series>
+                                <ej:Series XName="Quarter" YName="Value"></ej:Series>
+                            </Series>
+                            <Title Text="Total Full Credit Awards" />
+                        </ej:Chart>
+                        <ej:Chart ID="Chart1" runat="server">
+                            <PrimaryXAxis LabelIntersectAction="Trim"></PrimaryXAxis>
+                            <Series>
+                                <ej:Series XName="Quarter" YName="Value"></ej:Series>
+                            </Series>
+                            <Title Text="Total Full Credit Awards" />
+                        </ej:Chart>                      
+                    </div>
+                    <p style="text-align: center; font-size: 14px"></p>
+                    <p style="text-align: center; font-size: 20px">Department Comparison</p>
+                    <div class="DeptCompare_Gird">
+                        <ej:Grid ID="DepartGrid" runat="server" AllowPaging="true">
+                            <Columns>
+                                <ej:Column Field="Deptid_Descr" HeaderText="Department" TextAlign="Left" />
+                                <ej:Column Field="Quarter" HeaderText="Quarter" TextAlign="Right" />
+                                <ej:Column Field="Amount" HeaderText="Amount" TextAlign="Right" />
+                            </Columns>
+                        </ej:Grid>
+                    </div>
+                </div>
+            </div>
+
     <script type="text/javascript">
-        function cellmerge(args) { }
+        function mergeCellInfo(args) {
+            if (args.column.field == "Category" && args.rowData.Category == "Award" && args.rowData.Measure == "Total Award Amount")
+                args.rowMerge(5);
+            if (args.column.field == "Category" && args.rowData.Category == "Expenditure" && args.rowData.Measure == "Total Expenditure Amount")
+                args.rowMerge(5);
+        }
+
+        function a(args) {          
+            var chart = $("#Chart").ejChart("instance");
+            document.getElementById("chartlist").style.visibility = "hidden";
+        }       
     </script>
 </asp:Content>

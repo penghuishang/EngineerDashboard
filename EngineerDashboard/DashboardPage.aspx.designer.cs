@@ -13,33 +13,6 @@ namespace EngineerDashboard {
     public partial class DashboardPage {
         
         /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// DropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.DropDownList DropDownList;
-        
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
         /// MetricGrid control.
         /// </summary>
         /// <remarks>
@@ -47,33 +20,6 @@ namespace EngineerDashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Syncfusion.JavaScript.Web.Grid MetricGrid;
-        
-        /// <summary>
-        /// button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Button button;
-        
-        /// <summary>
-        /// ChartTabContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Tab ChartTabContent;
-        
-        /// <summary>
-        /// QtrB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.TabItem QtrB;
         
         /// <summary>
         /// Chart control.
@@ -85,15 +31,6 @@ namespace EngineerDashboard {
         protected global::Syncfusion.JavaScript.Web.Chart Chart;
         
         /// <summary>
-        /// QtrL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.TabItem QtrL;
-        
-        /// <summary>
         /// Chart1 control.
         /// </summary>
         /// <remarks>
@@ -101,78 +38,6 @@ namespace EngineerDashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Syncfusion.JavaScript.Web.Chart Chart1;
-        
-        /// <summary>
-        /// YoY control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.TabItem YoY;
-        
-        /// <summary>
-        /// Chart2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Chart Chart2;
-        
-        /// <summary>
-        /// RollB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.TabItem RollB;
-        
-        /// <summary>
-        /// Chart3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Chart Chart3;
-        
-        /// <summary>
-        /// RollL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.TabItem RollL;
-        
-        /// <summary>
-        /// Chart4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Chart Chart4;
-        
-        /// <summary>
-        /// FY control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.TabItem FY;
-        
-        /// <summary>
-        /// Chart5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Chart Chart5;
         
         /// <summary>
         /// DepartGrid control.
