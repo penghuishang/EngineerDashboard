@@ -73,9 +73,9 @@
             </div>
         </div>
         <div >
-            <ej:Menu ID="SyncfusionProducts" runat="server">
+            <ej:Menu ID="SyncfusionProducts" runat="server" Orientation="Vertical" SubMenuDirection="Right">
                 <Items>
-                    <ej:MenuItem Id="Dashboard" Url="DashboardPage.aspx" Text="Dashboard">
+                    <ej:MenuItem ID="Dashboard" Url="DashboardPage.aspx" Text="Dashboard">
                     </ej:MenuItem>
                     <ej:MenuItem Id="ImportExcel" Url="ImportExclePage.aspx" Text="Import Excel">
                     </ej:MenuItem>
