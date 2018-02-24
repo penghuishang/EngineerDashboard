@@ -17,6 +17,7 @@ namespace EngineerDashboard
 
         public static DataTable MetricDt;
         public static DataTable chartDt;
+        public static DataTable DepartDt;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,8 +28,24 @@ namespace EngineerDashboard
                     conn.Open();
                     try
                     {
+                        string query = "SELECT [Department] FROM Department;";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DepartDt = new DataTable();
+                        sda.Fill(DepartDt);
+                        DepartmentList.DataSource = DepartDt;
+                        DepartmentList.DataBind();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write(ex.Message);
+                    }
+
+                    try
+                    {
                         string query = "SELECT [Fiscal Year], [Quarter],[Measure],[Category],[DisplayOrder],sum([VALUE]) as Amount FROM " +
-                            "Engineering.dbo.Quater_ResearchAllAggregated where [Quarter]='Q4' and [Fiscal Year] = '2018'" +
+                            "Engineering.dbo.Quater_ResearchAllAggregated where [Quarter]='Q2' and [Fiscal Year] = '2018'" +
                             "GROUP BY [Fiscal Year],[Quarter], [Measure],[Category],[DisplayOrder]";
 
                         SqlCommand cmd = new SqlCommand(query, conn);
@@ -46,7 +63,7 @@ namespace EngineerDashboard
                     try
                     {
                         string query = "SELECT [Fiscal Year], [Quarter], sum([VALUE]) as Amount FROM " +
-                            "Engineering.dbo.Quater_ResearchAllAggregated where [Fiscal Year] = '2017'" +
+                            "Engineering.dbo.Quater_ResearchAllAggregated where [Fiscal Year] = '2018'" +
                             "GROUP BY [Fiscal Year],[Quarter]";
 
                         SqlCommand cmd = new SqlCommand(query, conn);

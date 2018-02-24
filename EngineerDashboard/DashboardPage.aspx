@@ -70,21 +70,35 @@
             <h1 style="text-align: center; font-size: 20px;">COE Research Metrics </h1>
         </div>
         <div>
-            <ej:Grid ID="MetricGrid" runat="server" AllowPaging="true" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
-                AllowResizeToFit="true" AllowResizing="true">
-                <SortedColumns>
-                    <ej:SortedColumn Field="Category" Direction="Ascending" />
-                    <ej:SortedColumn Field="DisplayOrder" Direction="Ascending" />
-                </SortedColumns>
-                <ClientSideEvents MergeCellInfo="mergeCellInfo" />
-                <Columns>
-                    <ej:Column Field="Category" HeaderText="Category" />
-                    <ej:Column Field="Measure" HeaderText="Metirc" TextAlign="Right" />
-                    <ej:Column Field="Quarter" HeaderText="Quarter" TextAlign="Right" />
-                    <ej:Column Field="Amount" HeaderText="Amount" TextAlign="Right" />
-                </Columns>
-                <ToolbarSettings ShowToolbar="True" ToolbarItems="search"></ToolbarSettings>
-            </ej:Grid>
+            <asp:UpdatePanel ID="UpdateMetric" runat="server" OnUnload="UpdatePanel_Unload">
+                <ContentTemplate>
+                    <div class="row">
+                        <div class="selectLeft">
+                            <p style="text-align: right; font-size: 14px"> Select a Department: </p>
+                        </div>
+                        <div class="selectRight">
+                            <ej:DropDownList ID="DepartmentList" runat="server">
+
+                            </ej:DropDownList>
+                        </div>
+                    </div>
+                    <ej:Grid ID="MetricGrid" runat="server" AllowPaging="true" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
+                        AllowResizeToFit="true" AllowResizing="true">
+                        <SortedColumns>
+                            <ej:SortedColumn Field="Category" Direction="Ascending" />
+                            <ej:SortedColumn Field="DisplayOrder" Direction="Ascending" />
+                        </SortedColumns>
+                        <ClientSideEvents MergeCellInfo="mergeCellInfo" />
+                        <Columns>
+                            <ej:Column Field="Category" HeaderText="Category" />
+                            <ej:Column Field="Measure" HeaderText="Metirc" TextAlign="Right" />
+                            <ej:Column Field="Quarter" HeaderText="Quarter" TextAlign="Right" />
+                            <ej:Column Field="Amount" HeaderText="Amount" TextAlign="Right" />
+                        </Columns>
+                        <ToolbarSettings ShowToolbar="True" ToolbarItems="search"></ToolbarSettings>
+                    </ej:Grid>
+                    </ContentTemplate>
+            </asp:UpdatePanel>
         </div>
         <div>
             <div class="button_list"> 
