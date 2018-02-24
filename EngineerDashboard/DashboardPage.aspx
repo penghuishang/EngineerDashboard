@@ -24,6 +24,9 @@
         .e-menu.e-horizontal .e-mhover, .e-menu.e-context .e-mhover, .e-menu.e-vertical .e-mhover, .e-menu.e-horizontal .e-mhover .e-menulink, .e-menu.e-context .e-mhover .e-menulink .e-menu.e-vertical .e-mhover .e-menulink .e-menu.e-horizontal .e-mfocused .e-menu.e-context .e-mfocused .e-menu.e-vertical .e-mfocused .e-menu.e-horizontal .e-mfocused .e-menulink .e-menu.e-context .e-mfocused .e-menulink .e-menu.e-vertical .e-mfocused .e-menulink .e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover {
             background: #ffd700;
         }
+            .e-menu.e-horizontal .e-mhover, .e-menu.e-context .e-mhover, .e-menu.e-vertical .e-mhover, .e-menu.e-horizontal .e-mhover .e-menulink, .e-menu.e-context .e-mhover .e-menulink .e-menu.e-vertical .e-mhover .e-menulink .e-menu.e-horizontal .e-mfocused .e-menu.e-context .e-mfocused .e-menu.e-vertical .e-mfocused .e-menu.e-horizontal .e-mfocused .e-menulink .e-menu.e-context .e-mfocused .e-menulink .e-menu.e-vertical .e-mfocused .e-menulink .e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover {
+                background: #ffd700;
+            }
 
         .e-grid tr.e-hover {
             background: #ffd700;
@@ -69,6 +72,7 @@
         <div class="row">
             <h1 style="text-align: center; font-size: 20px;">COE Research Metrics </h1>
         </div>
+<<<<<<< HEAD
         <div>
             <asp:UpdatePanel ID="UpdateMetric" runat="server" OnUnload="UpdatePanel_Unload">
                 <ContentTemplate>
@@ -83,6 +87,16 @@
                         </div>
                     </div>
                     <ej:Grid ID="MetricGrid" runat="server" AllowPaging="true" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
+=======
+        <div class="row">
+            <ej:Button Type="Button" runat="server" Text="Admin Unit" ClientSideOnClick="admin_unit_visiable" />
+            <ej:Button Type="Button" runat="server" Text="Shared Credit" ClientSideOnClick="share_credit_visiable" />
+        </div>
+        <div id="admin_unit_div" class="row">
+            <asp:UpdatePanel ID="UpdatePanel3" runat="server" OnUnload="UpdatePanel_Unload">
+                <ContentTemplate>
+                    <ej:Grid ID="MetricGrid" runat="server" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
+>>>>>>> 7fa62d4db311d8a600d4c675be3746382cc3513d
                         AllowResizeToFit="true" AllowResizing="true">
                         <SortedColumns>
                             <ej:SortedColumn Field="Category" Direction="Ascending" />
@@ -97,43 +111,68 @@
                         </Columns>
                         <ToolbarSettings ShowToolbar="True" ToolbarItems="search"></ToolbarSettings>
                     </ej:Grid>
+<<<<<<< HEAD
                     </ContentTemplate>
+=======
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <div id="share_credit_div" class="row">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server" OnUnload="UpdatePanel_Unload">
+                <ContentTemplate>
+                    <ej:Grid ID="Grid1" runat="server" AllowPaging="true" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
+                        AllowResizeToFit="true" AllowResizing="true">
+                        <SortedColumns>
+                            <ej:SortedColumn Field="Category" Direction="Ascending" />
+                            <ej:SortedColumn Field="DisplayOrder" Direction="Ascending" />
+                        </SortedColumns>
+                        <ClientSideEvents MergeCellInfo="mergeCellInfo" />
+                        <Columns>
+                            <ej:Column Field="Category" HeaderText="Category" />
+                            <ej:Column Field="Measure" HeaderText="Metirc" TextAlign="Right" />
+                            <ej:Column Field="Quarter" HeaderText="Quarter" TextAlign="Right" />
+                            <ej:Column Field="Amount" HeaderText="Amount" TextAlign="Right" />
+                        </Columns>
+                        <ToolbarSettings ShowToolbar="True" ToolbarItems="search"></ToolbarSettings>
+                    </ej:Grid>
+                </ContentTemplate>
+>>>>>>> 7fa62d4db311d8a600d4c675be3746382cc3513d
             </asp:UpdatePanel>
         </div>
         <div>
-            <div class="button_list"> 
-                 <ej:Button Type="Button" runat="server" Text="Log in" ClientSideOnClick="a" />       
-                </div>              
-                    <div id="chartlist" class="chart_list">
-                         <script type="text/javascript" src="../Scripts/ChartData.js"></script>
-                        <ej:Chart ID="Chart" runat="server" ClientIDMode="Static" IsResponsive="true" OnClientLoad="onChartLoad" EnableCanvasRendering="false">                             
-                            <PrimaryXAxis LabelIntersectAction="Trim"></PrimaryXAxis>
-                            <Series>
-                                <ej:Series XName="Quarter" YName="Value"></ej:Series>
-                            </Series>
-                            <Title Text="Total Full Credit Awards" />
-                        </ej:Chart>
-                        <ej:Chart ID="Chart1" runat="server">
-                            <PrimaryXAxis LabelIntersectAction="Trim"></PrimaryXAxis>
-                            <Series>
-                                <ej:Series XName="Quarter" YName="Value"></ej:Series>
-                            </Series>
-                            <Title Text="Total Full Credit Awards" />
-                        </ej:Chart>                      
-                    </div>
-                    <p style="text-align: center; font-size: 14px"></p>
-                    <p style="text-align: center; font-size: 20px">Department Comparison</p>
-                    <div class="DeptCompare_Gird">
-                        <ej:Grid ID="DepartGrid" runat="server" AllowPaging="true">
-                            <Columns>
-                                <ej:Column Field="Deptid_Descr" HeaderText="Department" TextAlign="Left" />
-                                <ej:Column Field="Quarter" HeaderText="Quarter" TextAlign="Right" />
-                                <ej:Column Field="Amount" HeaderText="Amount" TextAlign="Right" />
-                            </Columns>
-                        </ej:Grid>
-                    </div>
-                </div>
+            <div class="button_list">
+                <ej:Button Type="Button" runat="server" Text="Log in" ClientSideOnClick="a" />
             </div>
+            <div id="chartlist" class="chart_list">
+                <script type="text/javascript" src="../Scripts/ChartData.js"></script>
+                <ej:Chart ID="Chart" runat="server" ClientIDMode="Static" IsResponsive="true" OnClientLoad="onChartLoad" EnableCanvasRendering="false">
+                    <PrimaryXAxis LabelIntersectAction="Trim"></PrimaryXAxis>
+                    <Series>
+                        <ej:Series XName="Quarter" YName="Value"></ej:Series>
+                    </Series>
+                    <Title Text="Total Full Credit Awards" />
+                </ej:Chart>
+                <ej:Chart ID="Chart1" runat="server">
+                    <PrimaryXAxis LabelIntersectAction="Trim"></PrimaryXAxis>
+                    <Series>
+                        <ej:Series XName="Quarter" YName="Value"></ej:Series>
+                    </Series>
+                    <Title Text="Total Full Credit Awards" />
+                </ej:Chart>
+            </div>
+            <p style="text-align: center; font-size: 14px"></p>
+            <p style="text-align: center; font-size: 20px">Department Comparison</p>
+            <div class="DeptCompare_Gird">
+                <ej:Grid ID="DepartGrid" runat="server" AllowPaging="true">
+                    <Columns>
+                        <ej:Column Field="Deptid_Descr" HeaderText="Department" TextAlign="Left" />
+                        <ej:Column Field="Quarter" HeaderText="Quarter" TextAlign="Right" />
+                        <ej:Column Field="Amount" HeaderText="Amount" TextAlign="Right" />
+                    </Columns>
+                </ej:Grid>
+            </div>
+        </div>
+    </div>
 
     <script type="text/javascript">
         function mergeCellInfo(args) {
@@ -141,11 +180,19 @@
                 args.rowMerge(5);
             if (args.column.field == "Category" && args.rowData.Category == "Expenditure" && args.rowData.Measure == "Total Expenditure Amount")
                 args.rowMerge(5);
+            if (args.column.field == "Category" && args.rowData.Category == "Proposals" && args.rowData.Measure == "Total Proposals Amount")
+                args.rowMerge(5);
         }
 
-        function a(args) {          
-            var chart = $("#Chart").ejChart("instance");
-            document.getElementById("chartlist").style.visibility = "hidden";
-        }       
+        function admin_unit_visiable(args) {
+            document.getElementById("admin_unit_div").style.visibility = "visible";
+            document.getElementById("share_credit_div").style.visibility = "hidden";
+        }
+
+        function share_credit_visiable(args) {
+            document.getElementById("admin_unit_div").style.visibility = "hidden";
+            document.getElementById("share_credit_div").style.visibility = "visible";
+        }
+
     </script>
 </asp:Content>
