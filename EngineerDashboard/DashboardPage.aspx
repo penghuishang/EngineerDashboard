@@ -21,9 +21,6 @@
             font-weight: 600;
         }
 
-        .e-menu.e-horizontal .e-mhover, .e-menu.e-context .e-mhover, .e-menu.e-vertical .e-mhover, .e-menu.e-horizontal .e-mhover .e-menulink, .e-menu.e-context .e-mhover .e-menulink .e-menu.e-vertical .e-mhover .e-menulink .e-menu.e-horizontal .e-mfocused .e-menu.e-context .e-mfocused .e-menu.e-vertical .e-mfocused .e-menu.e-horizontal .e-mfocused .e-menulink .e-menu.e-context .e-mfocused .e-menulink .e-menu.e-vertical .e-mfocused .e-menulink .e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover {
-            background: #ffd700;
-        }
             .e-menu.e-horizontal .e-mhover, .e-menu.e-context .e-mhover, .e-menu.e-vertical .e-mhover, .e-menu.e-horizontal .e-mhover .e-menulink, .e-menu.e-context .e-mhover .e-menulink .e-menu.e-vertical .e-mhover .e-menulink .e-menu.e-horizontal .e-mfocused .e-menu.e-context .e-mfocused .e-menu.e-vertical .e-mfocused .e-menu.e-horizontal .e-mfocused .e-menulink .e-menu.e-context .e-mfocused .e-menulink .e-menu.e-vertical .e-mfocused .e-menulink .e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover {
                 background: #ffd700;
             }
