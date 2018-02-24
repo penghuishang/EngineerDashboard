@@ -12,9 +12,15 @@
             width: 320px;
         }
 
-        .selectRight {
-            margin-left: 340px;
-            text-align: left;
+        .selectMiddle {
+            float: left;
+            margin-left: 20px;
+            width = 300px;
+        }
+
+        .selectRight{
+            margin-left: 500px;
+            margin-top: 0px;
         }
 
         .e-menu {
@@ -76,13 +82,14 @@
                         <div class="selectLeft">
                             <p style="text-align: right; font-size: 14px"> Select a Department: </p>
                         </div>
+                        <div class="selectMiddle">
+                            <ej:DropDownList ID="DepartmentList" DataTextField="Deptid_Descr" DataValueField="Deptid_Descr" runat="server"/>
+                        </div>
                         <div class="selectRight">
-                            <ej:DropDownList ID="DepartmentList" DataTextField="Deptid_Descr" DataValueField="Deptid_Descr" runat="server">
-
-                            </ej:DropDownList>
+                            <ej:Button Type="Button" ID="RefreshButton" runat="server" Text="Refresh" OnClick="RefreshButton_Click" />
                         </div>
                     </div>
-                    <ej:Grid ID="MetricGrid" runat="server" AllowPaging="true" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
+                    <ej:Grid ID="MetricGrid" runat="server" AllowPaging="false" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
                         AllowResizeToFit="true" AllowResizing="true">
                         <SortedColumns>
                             <ej:SortedColumn Field="Category" Direction="Ascending" />

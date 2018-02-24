@@ -18,12 +18,13 @@ namespace EngineerDashboard
         public static DataTable MetricDt;
         public static DataTable chartDt;
         public static DataTable DepartDt;
+        public static SqlConnection conn;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["EngineeringConnection"].ConnectionString))
+                using (conn = new SqlConnection(ConfigurationManager.ConnectionStrings["EngineeringConnection"].ConnectionString))
                 {
                     conn.Open();
                     try
@@ -45,7 +46,7 @@ namespace EngineerDashboard
                     try
                     {
                         string query = "SELECT [Fiscal Year], [Quarter],[Measure],[Category],[DisplayOrder],sum([VALUE]) as Amount FROM " +
-                            "Engineering.dbo.Quater_ResearchAllAggregated where [Quarter]='Q2' and [Fiscal Year] = '2018'" +
+                            "Engineering.dbo.Quater_ResearchAllAggregated where [Quarter]='Q2' and [Fiscal Year] = '2018' " +
                             "GROUP BY [Fiscal Year],[Quarter], [Measure],[Category],[DisplayOrder]";
 
                         SqlCommand cmd = new SqlCommand(query, conn);
@@ -105,7 +106,43 @@ namespace EngineerDashboard
                 .Where(i => i.Name.Equals("System.Web.UI.IScriptManagerInternal.RegisterUpdatePanel")).First();
             methodInfo.Invoke(ScriptManager.GetCurrent(Page),
                 new object[] { sender as UpdatePanel });
-        }    
+        }
+
+        protected void RefreshButton_Click(object Sender, Syncfusion.JavaScript.Web.ButtonEventArgs e)
+        {
+            string text = DepartmentList.Value;
+
+            using (conn = new SqlConnection(ConfigurationManager.ConnectionStrings["EngineeringConnection"].ConnectionString))
+            {
+                conn.Open();
+                try
+                {
+                    string query;
+
+                    if (text == "ALL")
+                        query = "SELECT [Fiscal Year], [Quarter],[Measure],[Category],[DisplayOrder],sum([VALUE]) as Amount FROM " +
+                            "Engineering.dbo.Quater_ResearchAllAggregated where [Quarter]='Q2' and [Fiscal Year] = '2018'" +
+                            "GROUP BY [Fiscal Year],[Quarter], [Measure],[Category],[DisplayOrder]";
+                    else
+                        query = "SELECT [Fiscal Year], [Quarter],[Measure],[Category],[DisplayOrder],sum([VALUE]) as Amount FROM " +
+                            "Engineering.dbo.Quater_ResearchAllAggregated where [Quarter]='Q2' and [Fiscal Year] = '2018' and [Dept] = '" + text + "' " +
+                            "GROUP BY [Fiscal Year],[Quarter], [Measure],[Category],[DisplayOrder]";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    MetricDt.Clear();
+                    sda.Fill(MetricDt);
+                    MetricGrid.DataSource = MetricDt;
+                    MetricGrid.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    Response.Write(ex.Message);
+                }
+
+                conn.Close();
+            }
+        }
     }
 
     [Serializable]

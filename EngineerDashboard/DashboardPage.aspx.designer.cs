@@ -31,6 +31,15 @@ namespace EngineerDashboard {
         protected global::Syncfusion.JavaScript.Web.DropDownList DepartmentList;
         
         /// <summary>
+        /// RefreshButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.Button RefreshButton;
+        
+        /// <summary>
         /// MetricGrid control.
         /// </summary>
         /// <remarks>
