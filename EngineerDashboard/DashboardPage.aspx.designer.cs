@@ -13,17 +13,12 @@ namespace EngineerDashboard {
     public partial class DashboardPage {
         
         /// <summary>
-<<<<<<< HEAD
         /// UpdateMetric control.
-=======
-        /// UpdatePanel3 control.
->>>>>>> 7fa62d4db311d8a600d4c675be3746382cc3513d
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.UpdatePanel UpdateMetric;
         
         /// <summary>
@@ -34,9 +29,6 @@ namespace EngineerDashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Syncfusion.JavaScript.Web.DropDownList DepartmentList;
-=======
-        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
->>>>>>> 7fa62d4db311d8a600d4c675be3746382cc3513d
         
         /// <summary>
         /// MetricGrid control.
@@ -46,6 +38,24 @@ namespace EngineerDashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Syncfusion.JavaScript.Web.Grid MetricGrid;
+        
+        /// <summary>
+        /// UpdatePanel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
+        
+        /// <summary>
+        /// MetricGrid2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Syncfusion.JavaScript.Web.Grid MetricGrid2;
         
         /// <summary>
         /// UpdatePanel1 control.

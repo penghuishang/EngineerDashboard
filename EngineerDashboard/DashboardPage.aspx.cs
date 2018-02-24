@@ -28,7 +28,7 @@ namespace EngineerDashboard
                     conn.Open();
                     try
                     {
-                        string query = "SELECT [Department] FROM Department;";
+                        string query = "SELECT [Deptid_Descr] FROM Department;";
                         SqlCommand cmd = new SqlCommand(query, conn);
                         SqlDataAdapter sda = new SqlDataAdapter(cmd);
                         DepartDt = new DataTable();

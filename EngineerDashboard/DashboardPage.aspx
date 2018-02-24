@@ -69,7 +69,6 @@
         <div class="row">
             <h1 style="text-align: center; font-size: 20px;">COE Research Metrics </h1>
         </div>
-<<<<<<< HEAD
         <div>
             <asp:UpdatePanel ID="UpdateMetric" runat="server" OnUnload="UpdatePanel_Unload">
                 <ContentTemplate>
@@ -78,22 +77,12 @@
                             <p style="text-align: right; font-size: 14px"> Select a Department: </p>
                         </div>
                         <div class="selectRight">
-                            <ej:DropDownList ID="DepartmentList" runat="server">
+                            <ej:DropDownList ID="DepartmentList" DataTextField="Deptid_Descr" DataValueField="Deptid_Descr" runat="server">
 
                             </ej:DropDownList>
                         </div>
                     </div>
                     <ej:Grid ID="MetricGrid" runat="server" AllowPaging="true" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
-=======
-        <div class="row">
-            <ej:Button Type="Button" runat="server" Text="Admin Unit" ClientSideOnClick="admin_unit_visiable" />
-            <ej:Button Type="Button" runat="server" Text="Shared Credit" ClientSideOnClick="share_credit_visiable" />
-        </div>
-        <div id="admin_unit_div" class="row">
-            <asp:UpdatePanel ID="UpdatePanel3" runat="server" OnUnload="UpdatePanel_Unload">
-                <ContentTemplate>
-                    <ej:Grid ID="MetricGrid" runat="server" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
->>>>>>> 7fa62d4db311d8a600d4c675be3746382cc3513d
                         AllowResizeToFit="true" AllowResizing="true">
                         <SortedColumns>
                             <ej:SortedColumn Field="Category" Direction="Ascending" />
@@ -108,9 +97,31 @@
                         </Columns>
                         <ToolbarSettings ShowToolbar="True" ToolbarItems="search"></ToolbarSettings>
                     </ej:Grid>
-<<<<<<< HEAD
                     </ContentTemplate>
-=======
+            </asp:UpdatePanel>
+        </div>
+        <div class="row">
+            <ej:Button Type="Button" runat="server" Text="Admin Unit" ClientSideOnClick="admin_unit_visiable" />
+            <ej:Button Type="Button" runat="server" Text="Shared Credit" ClientSideOnClick="share_credit_visiable" />
+        </div>
+        <div id="admin_unit_div" class="row">
+            <asp:UpdatePanel ID="UpdatePanel3" runat="server" OnUnload="UpdatePanel_Unload">
+                <ContentTemplate>
+                    <ej:Grid ID="MetricGrid2" runat="server" AllowCellMerging="true" AllowSorting="True" AllowScrolling="true"
+                        AllowResizeToFit="true" AllowResizing="true">
+                        <SortedColumns>
+                            <ej:SortedColumn Field="Category" Direction="Ascending" />
+                            <ej:SortedColumn Field="DisplayOrder" Direction="Ascending" />
+                        </SortedColumns>
+                        <ClientSideEvents MergeCellInfo="mergeCellInfo" />
+                        <Columns>
+                            <ej:Column Field="Category" HeaderText="Category" />
+                            <ej:Column Field="Measure" HeaderText="Metirc" TextAlign="Right" />
+                            <ej:Column Field="Quarter" HeaderText="Quarter" TextAlign="Right" />
+                            <ej:Column Field="Amount" HeaderText="Amount" TextAlign="Right" />
+                        </Columns>
+                        <ToolbarSettings ShowToolbar="True" ToolbarItems="search"></ToolbarSettings>
+                    </ej:Grid>
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
@@ -133,7 +144,6 @@
                         <ToolbarSettings ShowToolbar="True" ToolbarItems="search"></ToolbarSettings>
                     </ej:Grid>
                 </ContentTemplate>
->>>>>>> 7fa62d4db311d8a600d4c675be3746382cc3513d
             </asp:UpdatePanel>
         </div>
         <div>
